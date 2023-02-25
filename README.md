@@ -1,2 +1,3 @@
 # SpamLabelClassifier
-Website for DSC180B: Weakly Supervised NLP
+Authors: Garrett Birch, Zairan Xiang, Ke Xu <br>
+Mentor: Jingbo Shang
