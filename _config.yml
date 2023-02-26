@@ -1,4 +1,5 @@
-remote_theme: pages-themes/cayman@v0.2.0
+theme: Minima
+# remote_theme: pages-themes/cayman@v0.2.0
 title: "Weakly Supervised Spam Label Classification"
 description: "Authors: Garrett Birch, Zairan Xiang, Ke Xu"
 plugins:
