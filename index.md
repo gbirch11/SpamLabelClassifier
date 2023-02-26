@@ -10,7 +10,7 @@ Given the abundance of spam that occurs in today's day and age, our goal is to c
 The data used was collected from the most reputable E-Mail dataset known as Enron (include link). This data contains 36000 emails split up into 6 groups, where in each group 4500 emails are declared as spam and 1500 are declared as "ham" (not spam). Since there is no labels on the E-Mails that were declared as spam, human annotation was required to create such labels and manually label all this data. We wanted to keep our model in a setting where generalization is a big factor given that spam messages change drastically over time, so we took only one set of these messages (6000) and annotated the 4500 spam messages into popular categories of spam including; medical, software, insurance, phising, sexual, etc.
 
 ## **Problem Overview**
-<img src="/assets/img/problem_flow.png">
+<img src="asstes/img/problem_flow.png" style="width:500px">
 
 ## **Models**
 
