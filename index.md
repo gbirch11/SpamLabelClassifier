@@ -24,9 +24,11 @@ We started with baseline models to get an idea of how well they will perform in 
  Where 
     tf(t, d) = # of times t appears in d
  and 
+ 
     <p align="center">
     <img src="assets/img/formula1.png" style="width:500px">
     </p>
+    
  For each document, sum up all TF-IDF values for all seedwords within a label, and assign the document with the label that has the highest TF-IDF sum.
  - Micro/Macro F1 calculation: Use sklearn.metrics.f1_score to derive Micro and Macro F1 scores, respectively.
 
@@ -35,9 +37,11 @@ As our next baseline model, we implemented another classical technique Word2Vec.
 - Data cleaning and preprocessing: Change all sentences to be lower-cased. Remove punctuation, trailing white spaces and stop words using NLTK. 
 - Word2Vec Model Training: Initialize a Word2Vec vector from gensim and specify size = 110, window = 5, min_count = 1. Use 4 workers and train for 800 epochs. 
 - Cosine similarity calculation: For each seedword, fetch the corresponding vector from Word2Vec model. Take the average of all vectors within a label and use that as the final word vector. For a single document, simply take the average of all word vectors within that document. Compute the cosine similarity between a document and a label using the following formula 
+
     <p align="center">
     <img src="assets/img/formula2.png" style="width:500px">
     </p>
+    
 Where doc represents the word vector for a document, and label represents the word vector for a label. Assign the document with the label that has the highest cosine similarity.
 - Micro/Macro F1 calculation: Use sklearn.metrics.f1_score to derive Micro and Macro F1 scores, respectively.
 
