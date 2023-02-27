@@ -10,7 +10,7 @@ Given the abundance of spam that occurs in today's day and age, our goal is to c
 The data used was collected from the most reputable E-Mail dataset known as Enron (include link). This data contains 36000 emails split up into 6 groups, where in each group 4500 emails are declared as spam and 1500 are declared as "ham" (not spam). Since there is no labels on the E-Mails that were declared as spam, human annotation was required to create such labels and manually label all this data. We wanted to keep our model in a setting where generalization is a big factor given that spam messages change drastically over time, so we took only one set of these messages (6000) and annotated the 4500 spam messages into popular categories of spam including; medical, software, insurance, phising, sexual, etc.
 
 ## **Problem Overview**
-<img src="assets/img/problem_flow.png" style="width:500px">
+<img src="assets/img/problem_flow.png" style="width:500px" class="center">
 
 ## **Models**
 
@@ -43,6 +43,7 @@ We used the word vector representations trained by unsupervised FastText for pre
 - Micro/Macro F1 calculation: Use sklearn.metrics.f1_score to derive Micro and Macro F1 scores, respectively.
 
 ## **Conclusion and Results**
+<img src="assets/img/performance.png" style="width:500px" class="center">
 
 FastText outperforms TFIDF and Word2Vec with an accuracy scores higher than 0.7. We are able to extract meaningful relationship between the spam email contents and the spam label using weakly supervised learning with a set of seed words for each label class. 
 A limitation to our model is the spam emails in Enron dataset are similar to each other, thus we expect the model to perform a little bit worse when the user input spam email in its unseen format. We aim to build an interactive website for people to play with the model, and at the same time, we will retrain and update the model with more data in the future. 
