@@ -52,6 +52,13 @@ We used the word vector representations trained by unsupervised FastText for pre
 - Cosine similarity calculation: The calculation and prediction procedure is similar to that of Word2Vec, the only difference is that we use different word embeddings.
 - Micro/Macro F1 calculation: Use sklearn.metrics.f1_score to derive Micro and Macro F1 scores, respectively.
 
+### ConWea
+Contextualizesd Weakly Supervised Text Classification. \
+ConWea aims to produce context for words, since human language is so dependant on context this would help our models performance. Contextualizing both the seed words and the documents, we are left with a contextualized corpus that can have the same words with different meanings based on their context. This will end up disambiguating the user provided seed words, which is very important if we are given fine-grained seed word labels. ConWea uses a Hierarchial Attention Network to do the predictions. More information on the whole process behind ConWea, which was created by our mentor Jingbo Shang along with Dheeraj Mekala, can be found [here](https://aclanthology.org/2020.acl-main.30.pdf)
+<p align="center">
+<img src="assets/img/ConWea.png" style="width:500px">
+</p>
+
 ## **Conclusion and Results**
 <p align="center">
     <img src="assets/img/performance.png" style="width:500px">
@@ -59,4 +66,10 @@ We used the word vector representations trained by unsupervised FastText for pre
 
 FastText outperforms TFIDF and Word2Vec with an accuracy scores higher than 0.7. We are able to extract meaningful relationship between the spam email contents and the spam label using weakly supervised learning with a set of seed words for each label class. 
 A limitation to our model is the spam emails in Enron dataset are similar to each other, thus we expect the model to perform a little bit worse when the user input spam email in its unseen format. We aim to build an interactive website for people to play with the model, and at the same time, we will retrain and update the model with more data in the future. 
+
+
+## References
+[1]  Dheeraj Mekala and Jingbo Shang. 2020. Contextualized Weak Supervision for Text Classification. In Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics. Association for Computational Linguistics. https://aclanthology.org/2020.acl-main.30
+
+[2] A. Joulin, E. Grave, P. Bojanowski, T. Mikolov, Bag of Tricks for Efficient Text Classification. https://arxiv.org/abs/1607.01759
 
